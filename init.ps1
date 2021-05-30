@@ -30,7 +30,7 @@ New-TemporaryFile | ForEach-Object {
   Start-Process "git" -ArgumentList "push --set-upstream origin main" -Wait -NoNewWindow -WorkingDirectory "$_"
   Move-Item -Path "$_\.git" -Destination "$Repo\" -Force -Verbose
   Set-Location "$Repo"
-  Start-Process "git" -ArgumentList "reset --hard origin/main" -Wait -NoNewWindow -WorkingDirectory "$_"
+  Start-Process "git" -ArgumentList "reset --hard origin/main" -Wait -NoNewWindow -WorkingDirectory "$Repo"
   Set-Location "$Documents"
   Set-Location "$Repo"
   Add-Type -AssemblyName System.Windows.Forms
