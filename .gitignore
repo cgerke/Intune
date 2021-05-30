@@ -1,0 +1,11 @@
+/*
+!.vscode
+!Remediation/
+Remediation/*
+!*_Uptime.ps1
+!.gitattributes
+!.gitignore
+!init.ps1
+!LICENSE
+!Microsoft.Intune.code-workspace
+!README.md
