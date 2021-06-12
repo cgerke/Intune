@@ -7,5 +7,5 @@ Remediation/*
 !.gitignore
 !init.ps1
 !LICENSE
-!Microsoft.Intune.code-workspace
+!Intune.code-workspace
 !README.md

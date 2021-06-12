@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/*.exe": true
+		},
+		"telemetry.enableTelemetry": false,
+		"powershell.codeFormatting.autoCorrectAliases": true,
+		"powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+		"powershell.codeFormatting.useCorrectCasing": true,
+		"powershell.codeFormatting.preset": "Allman",
+		"powershell.codeFormatting.whitespaceBetweenParameters": true,
+		"editor.tabSize": 4,
+		"diffEditor.ignoreTrimWhitespace": false,
+		"editor.renderWhitespace": "all",
+		"files.trimTrailingWhitespace": true,
+		"powershell.enableProfileLoading": true,
+		"terminal.integrated.cwd": "${fileDirname}",
+		"terminal.integrated.profiles.windows": {
+			"PowerShell RemoteSigned": {
+			  "source": "PowerShell",
+			  "args": ["-NoLogo","-ExecutionPolicy","RemoteSigned"]
+			}
+		},
+		"terminal.integrated.defaultProfile.windows": "PowerShell RemoteSigned"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "PowerShell: Launch Current File",
+				"type": "PowerShell",
+				"request": "launch",
+				"script": "${file}",
+				"cwd": "${file}"
+			}
+		]
+	}
+}
