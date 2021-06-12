@@ -21,12 +21,14 @@
 		"powershell.enableProfileLoading": true,
 		"terminal.integrated.cwd": "${fileDirname}",
 		"terminal.integrated.profiles.windows": {
-			"PowerShell RemoteSigned": {
+			"PoshShell": {
 			  "source": "PowerShell",
-			  "args": ["-NoLogo","-ExecutionPolicy","RemoteSigned"]
-			}
+			  "args": ["-NoExit","-NoLogo","-ExecutionPolicy","RemoteSigned",";Set-Theme ys"]
+			},
+			"Git Bash": null,
+			"JavaScript Debug Terminal": null
 		},
-		"terminal.integrated.defaultProfile.windows": "PowerShell RemoteSigned"
+		"terminal.integrated.defaultProfile.windows": "PoshShell"
 	},
 	"launch": {
 		"version": "0.2.0",
