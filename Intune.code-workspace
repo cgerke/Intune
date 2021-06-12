@@ -21,10 +21,6 @@
 		"terminal.integrated.tabs.enabled": true,
 		"terminal.integrated.cwd": "${fileDirname}",
 		"terminal.integrated.profiles.windows": {
-			"Posh": {
-				"source": "PowerShell",
-				"args": ["-NoLogo","-ExecutionPolicy","RemoteSigned","-NoExit",";Set-Theme ys"]
-			},
 			"PowerShell NoProfile": {
 				"source":"PowerShell",
 				"args": ["-NoProfile","-NoLogo"]
