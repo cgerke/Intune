@@ -8,7 +8,6 @@
 		"files.exclude": {
 			"**/*.exe": true
 		},
-		"telemetry.enableTelemetry": false,
 		"powershell.codeFormatting.autoCorrectAliases": true,
 		"powershell.codeFormatting.trimWhitespaceAroundPipe": true,
 		"powershell.codeFormatting.useCorrectCasing": true,
@@ -19,16 +18,19 @@
 		"editor.renderWhitespace": "all",
 		"files.trimTrailingWhitespace": true,
 		"powershell.enableProfileLoading": true,
+		"terminal.integrated.tabs.enabled": true,
 		"terminal.integrated.cwd": "${fileDirname}",
 		"terminal.integrated.profiles.windows": {
-			"PoshShell": {
-			  "source": "PowerShell",
-			  "args": ["-NoExit","-NoLogo","-ExecutionPolicy","RemoteSigned",";Set-Theme ys"]
+			"Posh": {
+				"source": "PowerShell",
+				"args": ["-NoLogo","-ExecutionPolicy","RemoteSigned","-NoExit",";Set-Theme ys"]
 			},
-			"Git Bash": null,
-			"JavaScript Debug Terminal": null
+			"PowerShell NoProfile": {
+				"source":"PowerShell",
+				"args": ["-NoProfile","-NoLogo"]
+			},
 		},
-		"terminal.integrated.defaultProfile.windows": "PoshShell"
+		"terminal.integrated.defaultProfile.windows": "PowerShell"
 	},
 	"launch": {
 		"version": "0.2.0",
