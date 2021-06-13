@@ -23,10 +23,15 @@
 		"terminal.integrated.profiles.windows": {
 			"PowerShell NoProfile": {
 				"source":"PowerShell",
-				"args": ["-NoProfile","-NoLogo"]
+				"args": ["-NoProfile","-NoLogo","-ExecutionPolicy","RemoteSigned"]
 			},
+			"PowerShell Posh": {
+				"source":"PowerShell",
+				"args": ["-NoLogo","-NoExit","-ExecutionPolicy","RemoteSigned;","Set-Theme ys"]
+			},
+			"Git Bash": null,
 		},
-		"terminal.integrated.defaultProfile.windows": "PowerShell"
+		"terminal.integrated.defaultProfile.windows": "PowerShell Posh"
 	},
 	"launch": {
 		"version": "0.2.0",
