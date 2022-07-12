@@ -5,13 +5,47 @@
             "shell": {
                 "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "args": [
-                    "-ExecutionPolicy",
-                    "RemoteSigned",
                     "-NoProfile",
-                    "-NoLogo",
+                    "-ExecutionPolicy",
+                    "Bypass",
                     "-Command"
                 ]
             }
         }
-    }
+    },
+    "tasks": [
+        {
+            "label": "Build",
+            "presentation": {
+                "close": false
+            },
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${cwd}/.vscode/build.ps1",
+                "${cwd}", //0
+                "${cwd}\\..\\SOURCE" //1
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
 }
+// Available variables which can be used inside of strings:
+// ${workspaceFolder} the path of the workspace folder that contains the tasks.json file
+// ${workspaceFolderBasename} the name of the workspace folder that contains the tasks.json file without any slashes (/)
+// ${file} the current opened file
+// ${relativeFile} the current opened file relative to the workspace folder containing the file
+// ${fileBasename} the current opened file's basename
+// ${fileBasenameNoExtension} the current opened file's basename without the extension
+// ${fileDirname} the current opened file's dirname
+// ${fileExtname} the current opened file's extension
+// ${cwd} the task runner's current working directory on startup
+// ${lineNumber} the current selected line number in the active file
