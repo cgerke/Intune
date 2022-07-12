@@ -1,5 +1,12 @@
 /*
 !.vscode
+!Application/
+Application/*
+!Application/256x256.png
+!Application/detection.ps1
+!Application/install.ps1
+!Application/requirement.ps1
+!Application/uninstall.ps1
 !Remediation/
 Remediation/*
 !*_Uptime.ps1
